@@ -28,7 +28,7 @@ void First(RenderWindow& window)
 
 
 	Font font;
-	font.loadFromFile("WinterSnow.ttf");
+	font.loadFromFile("Winter Snow.ttf");
 	Text text("", font, 30);
 	text.setStyle(Text::Bold);
 	text.setPosition(255, 120);
