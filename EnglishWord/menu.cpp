@@ -11,7 +11,7 @@ using namespace sf;
 
 int main()
 {
-	RenderWindow window(VideoMode(720, 480), "English Word", sf::Style::Close);
+	RenderWindow window(VideoMode(720, 480), "English Words", sf::Style::Close);
 	window.setVerticalSyncEnabled(true);
 
 	while (window.isOpen())
