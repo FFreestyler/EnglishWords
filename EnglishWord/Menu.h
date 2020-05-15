@@ -43,7 +43,7 @@ void menu(RenderWindow & window)
 	SCloudSprite.setPosition(550, 200);
 
 	Font font;
-	font.loadFromFile("Winter Snow.ttf");
+	font.loadFromFile("WinterSnow.ttf");
 	Text text("", font, 30);
 	text.setStyle(Text::Bold);
 	text.setPosition(255, 120);
