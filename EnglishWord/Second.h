@@ -27,16 +27,16 @@ void Second(RenderWindow& window)
     BackGrSprite.setPosition(0, 0);
 
     Texture testbut1, testbut2, testbut3, testbut4, testbut5, testbut6, testbut7, testbut8, testbut9, testbut10;
-    testbut1.loadFromFile("images/testbut1.png");
-    testbut2.loadFromFile("images/testbut2.png");
-    testbut3.loadFromFile("images/testbut3.png");
-    testbut4.loadFromFile("images/testbut4.png");
-    testbut5.loadFromFile("images/testbut5.png");
-    testbut6.loadFromFile("images/testbut6.png");
-    testbut7.loadFromFile("images/testbut7.png");
-    testbut8.loadFromFile("images/testbut8.png");
-    testbut9.loadFromFile("images/testbut9.png");
-    testbut10.loadFromFile("images/testbut10.png");
+    testbut1.loadFromFile("images/testbutsecond/testbut1.png");
+    testbut2.loadFromFile("images/testbutsecond/testbut2.png");
+    testbut3.loadFromFile("images/testbutsecond/testbut3.png");
+    testbut4.loadFromFile("images/testbutsecond/testbut4.png");
+    testbut5.loadFromFile("images/testbutsecond/testbut5.png");
+    testbut6.loadFromFile("images/testbutsecond/testbut6.png");
+    testbut7.loadFromFile("images/testbutsecond/testbut7.png");
+    testbut8.loadFromFile("images/testbutsecond/testbut8.png");
+    testbut9.loadFromFile("images/testbutsecond/testbut9.png");
+    testbut10.loadFromFile("images/testbutsecond/testbut10.png");
     Sprite testbut1Texture(testbut1), testbut2Texture(testbut2), testbut3Texture(testbut3), testbut4Texture(testbut4), testbut5Texture(testbut5),
         testbut6Texture(testbut6), testbut7Texture(testbut7), testbut8Texture(testbut8), testbut9Texture(testbut9), testbut10Texture(testbut10);
     //bool isMenu = 1;
@@ -54,9 +54,9 @@ void Second(RenderWindow& window)
 
     Font font;
     font.loadFromFile("Winter Snow.ttf");
-    Text text("", font, 30);
+    Text text("", font, 28);
     text.setStyle(Text::Bold);
-    text.setPosition(255, 120);
+    text.setPosition(230, 15);
 
     while (isMenu)
     {
@@ -101,11 +101,11 @@ void Second(RenderWindow& window)
                     
             }
         }
-        text.setString("");
+        text.setString("Choice test block");
         window.setTitle("English Word");
         window.clear(sf::Color(21, 132, 149));
-        window.draw(text);
         window.draw(BackGrSprite);
+        window.draw(text);
         window.draw(ex);
         window.draw(testbut1Texture); window.draw(testbut2Texture); window.draw(testbut3Texture); window.draw(testbut4Texture); window.draw(testbut5Texture);
         window.draw(testbut6Texture); window.draw(testbut7Texture); window.draw(testbut8Texture); window.draw(testbut9Texture); window.draw(testbut10Texture);

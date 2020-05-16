@@ -29,21 +29,21 @@ void First(RenderWindow& window)
 
 	Font font;
 	font.loadFromFile("Winter Snow.ttf");
-	Text text("", font, 30);
+	Text text("", font, 28);
 	text.setStyle(Text::Bold);
-	text.setPosition(255, 120);
+	text.setPosition(230, 15);
 
 	Texture testbut1, testbut2, testbut3, testbut4, testbut5, testbut6, testbut7, testbut8, testbut9, testbut10;
-	testbut1.loadFromFile("images/testbut1.png");
-	testbut2.loadFromFile("images/testbut2.png");
-	testbut3.loadFromFile("images/testbut3.png");
-	testbut4.loadFromFile("images/testbut4.png");
-	testbut5.loadFromFile("images/testbut5.png");
-	testbut6.loadFromFile("images/testbut6.png");
-	testbut7.loadFromFile("images/testbut7.png");
-	testbut8.loadFromFile("images/testbut8.png");
-	testbut9.loadFromFile("images/testbut9.png");
-	testbut10.loadFromFile("images/testbut10.png");
+	testbut1.loadFromFile("images/testbutfirst/testbut1.png");
+	testbut2.loadFromFile("images/testbutfirst/testbut2.png");
+	testbut3.loadFromFile("images/testbutfirst/testbut3.png");
+	testbut4.loadFromFile("images/testbutfirst/testbut4.png");
+	testbut5.loadFromFile("images/testbutfirst/testbut5.png");
+	testbut6.loadFromFile("images/testbutfirst/testbut6.png");
+	testbut7.loadFromFile("images/testbutfirst/testbut7.png");
+	testbut8.loadFromFile("images/testbutfirst/testbut8.png");
+	testbut9.loadFromFile("images/testbutfirst/testbut9.png");
+	testbut10.loadFromFile("images/testbutfirst/testbut10.png");
 	Sprite testbut1Texture(testbut1), testbut2Texture(testbut2), testbut3Texture(testbut3), testbut4Texture(testbut4), testbut5Texture(testbut5),
 		testbut6Texture(testbut6), testbut7Texture(testbut7), testbut8Texture(testbut8), testbut9Texture(testbut9), testbut10Texture(testbut10);
 	//bool isMenu = 1;
@@ -87,20 +87,20 @@ void First(RenderWindow& window)
 
 			if (event.type == Event::MouseButtonReleased) {
 				if (event.mouseButton.button == Mouse::Left)
-					if (MenuNum == 1) { printf("1"); }
-					if (MenuNum == 2) { printf("2"); }
-					if (MenuNum == 3) { printf("3"); }
-					if (MenuNum == 4) { printf("4"); }
-					if (MenuNum == 5) { printf("5"); }
-					if (MenuNum == 6) { printf("6"); }
-					if (MenuNum == 7) { printf("7"); }
-					if (MenuNum == 8) { printf("8"); }
-					if (MenuNum == 9) { printf("9"); }
-					if (MenuNum == 10) { printf("10"); }
+					if (MenuNum == 1) { printf("1 "); }
+					if (MenuNum == 2) { printf("2 "); }
+					if (MenuNum == 3) { printf("3 "); }
+					if (MenuNum == 4) { printf("4 "); }
+					if (MenuNum == 5) { printf("5 "); }
+					if (MenuNum == 6) { printf("6 "); }
+					if (MenuNum == 7) { printf("7 "); }
+					if (MenuNum == 8) { printf("8 "); }
+					if (MenuNum == 9) { printf("9 "); }
+					if (MenuNum == 10) { printf("10 "); }
 					if (MenuNum == 11) { isMenu = false; }
 			}
 		}
-		text.setString("");
+		text.setString("Choice word block");
 		window.setTitle("English Word");
 		window.clear(sf::Color(21, 132, 149));
 		window.draw(text);
