@@ -1,12 +1,15 @@
 #pragma once
+#include "Menu.h"
+#include "TestFirst.h"
+
 #include <SFML/Graphics.hpp>
 #include<iostream>
 #include<fstream>
 #include<vector>
 #include<functional>
-#include "Menu.h"
 
 using namespace sf;
+using namespace std;
 
 void First(RenderWindow& window)
 {
@@ -66,7 +69,7 @@ void First(RenderWindow& window)
 
 		if (IntRect(274, 434, 173, 32).contains(Mouse::getPosition(window))) { MenuNum = 11; }
 		if (IntRect(50, 50, 182, 63).contains(Mouse::getPosition(window))) { MenuNum = 1; }
-		if (IntRect(269, 50, 182, 63).contains(Mouse::getPosition(window))) { MenuNum = 2; }
+		if (IntRect(269, 50, 364, 63).contains(Mouse::getPosition(window))) { MenuNum = 2; }
 		if (IntRect(488, 50, 182, 63).contains(Mouse::getPosition(window))) { MenuNum = 3; }
 		if (IntRect(50, 145, 182, 63).contains(Mouse::getPosition(window))) { MenuNum = 4; }
 		if (IntRect(269, 145, 182, 63).contains(Mouse::getPosition(window))) { MenuNum = 5; }
@@ -87,7 +90,7 @@ void First(RenderWindow& window)
 
 			if (event.type == Event::MouseButtonReleased) {
 				if (event.mouseButton.button == Mouse::Left)
-					if (MenuNum == 1) { printf("1 "); }
+					if (MenuNum == 1) { TestFirst(window); }
 					if (MenuNum == 2) { printf("2 "); }
 					if (MenuNum == 3) { printf("3 "); }
 					if (MenuNum == 4) { printf("4 "); }
@@ -106,7 +109,7 @@ void First(RenderWindow& window)
 		window.draw(text);
 		window.draw(BackGrSprite);
 		window.draw(ex);
-		window.draw(testbut1Texture); window.draw(testbut2Texture); window.draw(testbut3Texture); window.draw(testbut4Texture); window.draw(testbut5Texture); 
+		window.draw(testbut1Texture); window.draw(testbut2Texture); window.draw(testbut3Texture); window.draw(testbut4Texture); window.draw(testbut5Texture);
 		window.draw(testbut6Texture); window.draw(testbut7Texture); window.draw(testbut8Texture); window.draw(testbut9Texture); window.draw(testbut10Texture);
 
 		window.display();
