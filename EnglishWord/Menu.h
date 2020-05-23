@@ -4,23 +4,20 @@
 #include<fstream>
 #include<vector>
 #include<functional>
-#include "First.h"
 #include "Second.h"
 
 using namespace sf;
 
 void menu(RenderWindow & window)
 {
-	Texture menuTexture1, menuTexture2, menuTexture3;
-	menuTexture1.loadFromFile("images/button1.png");
+	Texture menuTexture2, menuTexture3;
 	menuTexture2.loadFromFile("images/button2.png");
 	menuTexture3.loadFromFile("images/button3.png");
-	Sprite menu1(menuTexture1), menu2(menuTexture2), menu3(menuTexture3);
+	Sprite button2(menuTexture2), button3(menuTexture3);
 	bool isMenu = 1;
 	int MenuNum = 0;
-	menu1.setPosition(200, 200);
-	menu2.setPosition(400, 200);
-	menu3.setPosition(300, 350);
+	button2.setPosition(300, 200);
+	button3.setPosition(300, 350);
 
 	Image FirstCloud;
 	FirstCloud.loadFromFile("images/Cloud.png");
@@ -52,10 +49,8 @@ void menu(RenderWindow & window)
 	{
 		MenuNum = 0;
 		Event event;
-		menu1.setColor(Color::White);
 
-		if (IntRect(200, 200, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 1; }
-		if (IntRect(400, 200, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 2; }
+		if (IntRect(300, 200, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 2; }
 		if (IntRect(300, 350, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 3; }
 
 		while (window.pollEvent(event))
@@ -69,7 +64,6 @@ void menu(RenderWindow & window)
 
 			if (event.type == Event::MouseButtonReleased) {
 				if (event.mouseButton.button == Mouse::Left)
-					if (MenuNum == 1) { First(window); }
 					if (MenuNum == 2) { Second(window); }
 					if (MenuNum == 3) { window.close(); isMenu = false; }
 			}
@@ -80,9 +74,8 @@ void menu(RenderWindow & window)
 		window.draw(text);
 		window.draw(FCloudSprite);
 		window.draw(SCloudSprite);
-		window.draw(menu1);
-		window.draw(menu2);
-		window.draw(menu3);
+		window.draw(button2);
+		window.draw(button3);
 
 		window.display();
 	}

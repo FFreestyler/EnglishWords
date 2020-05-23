@@ -57,6 +57,7 @@ void Second(RenderWindow& window)
                     if (MenuNum == 1)
                     {
                         isMenu = false;
+
                     }
             }
         }
