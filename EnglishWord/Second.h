@@ -6,6 +6,7 @@
 #include <functional>
 #include "Second.h"
 #include "Menu.h"
+#include "Test.h"
 
 using namespace sf;
 
@@ -74,6 +75,7 @@ void Second(RenderWindow& window)
         if (IntRect(269, 240, 182, 63).contains(Mouse::getPosition(window))) { MenuNum = 8; }
         if (IntRect(488, 240, 182, 63).contains(Mouse::getPosition(window))) { MenuNum = 9; }
         if (IntRect(269, 335, 182, 63).contains(Mouse::getPosition(window))) { MenuNum = 10; }
+        
 
         while (window.pollEvent(event))
         {
@@ -88,16 +90,20 @@ void Second(RenderWindow& window)
             {
                 if (event.mouseButton.button == Mouse::Left)
                     if (MenuNum == 11) { isMenu = false; }
-                    if (MenuNum == 1) { printf("1"); }
-					if (MenuNum == 2) { printf("2"); }
-					if (MenuNum == 3) { printf("3"); }
-					if (MenuNum == 4) { printf("4"); }
-					if (MenuNum == 5) { printf("5"); }
-					if (MenuNum == 6) { printf("6"); }
-					if (MenuNum == 7) { printf("7"); }
-					if (MenuNum == 8) { printf("8"); }
-					if (MenuNum == 9) { printf("9"); }
-					if (MenuNum == 10) { printf("10"); }
+                    else
+                    {
+
+                        if (MenuNum == 1) { Test(window); }
+                        if (MenuNum == 2) { printf("2"); }
+                        if (MenuNum == 3) { printf("3"); }
+                        if (MenuNum == 4) { printf("4"); }
+                        if (MenuNum == 5) { printf("5"); }
+                        if (MenuNum == 6) { printf("6"); }
+                        if (MenuNum == 7) { printf("7"); }
+                        if (MenuNum == 8) { printf("8"); }
+                        if (MenuNum == 9) { printf("9"); }
+                        if (MenuNum == 10) { printf("10"); }
+                    }
                     
             }
         }

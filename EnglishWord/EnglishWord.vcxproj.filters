@@ -29,7 +29,10 @@
     <ClInclude Include="Second.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="TestFirst.h">
+    <ClInclude Include="Test.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="TextBox.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,2 +1,38 @@
 ﻿  menu.cpp
+C:\EnglishWords\EnglishWord\TextBox.h(45,53): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\EnglishWords\EnglishWord\TextBox.h(45,35): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\EnglishWords\EnglishWord\TextBox.h(84,99): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\EnglishWords\EnglishWord\TextBox.h(84,70): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\EnglishWords\EnglishWord\TextBox.h(111,99): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\EnglishWords\EnglishWord\TextBox.h(111,70): warning C4244: аргумент: преобразование "unsigned int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\EnglishWords\EnglishWord\Test.h(43,31): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\EnglishWords\EnglishWord\Test.h(47,45): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
   EnglishWord.vcxproj -> C:\EnglishWords\x64\Debug\EnglishWord.exe

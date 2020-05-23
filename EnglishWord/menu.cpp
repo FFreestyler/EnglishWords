@@ -10,10 +10,12 @@ using namespace sf;
 
 int main()
 {
-	RenderWindow window(VideoMode(720, 480), "English Words", sf::Style::Close);
-	window.setVerticalSyncEnabled(true);
+	const int height = 480; //Высота окна
+	const int width = 720; //Ширина окна
+	RenderWindow window(VideoMode(width, height), "English Words", sf::Style::Close);//Создание окна
+	window.setVerticalSyncEnabled(true);//Включение вертикальной синхронизации окна
 
-	while (window.isOpen())
+	while (window.isOpen())//Отрисовка окна
 	{
 		menu(window);
 	}
