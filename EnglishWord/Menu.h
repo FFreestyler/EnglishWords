@@ -11,7 +11,7 @@ using namespace sf;
 void menu(RenderWindow & window)
 {
 	Texture menuTexture2, menuTexture3;
-	menuTexture2.loadFromFile("images/button2.png");
+	menuTexture2.loadFromFile("images/button1.png");
 	menuTexture3.loadFromFile("images/button3.png");
 	Sprite button2(menuTexture2), button3(menuTexture3);
 	bool isMenu = 1;
@@ -43,7 +43,7 @@ void menu(RenderWindow & window)
 	font.loadFromFile("Winter Snow.ttf");
 	Text text("", font, 30);
 	text.setStyle(Text::Bold);
-	text.setPosition(255, 120);
+	text.setPosition(263, 120);
 
 	while (isMenu)
 	{
