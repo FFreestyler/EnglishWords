@@ -7,6 +7,7 @@
 #include "Second.h"
 
 using namespace sf;
+using namespace std;
 
 void menu(RenderWindow & window)
 {
@@ -45,6 +46,8 @@ void menu(RenderWindow & window)
 	text.setStyle(Text::Bold);
 	text.setPosition(263, 120);
 
+	sf::Clock clock;
+
 	while (isMenu)
 	{
 		MenuNum = 0;
@@ -67,6 +70,11 @@ void menu(RenderWindow & window)
 					if (MenuNum == 2) { Second(window); }
 					if (MenuNum == 3) { window.close(); isMenu = false; }
 			}
+
+			float time = clock.getElapsedTime().asMicroseconds();
+			clock.restart();
+			time = time/800;
+			cout << time << endl;
 		}
 		window.setTitle("English Word");
 		window.clear(sf::Color(71, 202, 221));

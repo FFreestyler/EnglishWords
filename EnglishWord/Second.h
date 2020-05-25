@@ -55,7 +55,7 @@ void Second(RenderWindow& window)
     font.loadFromFile("Winter Snow.ttf");
     Text text("", font, 28);
     text.setStyle(Text::Bold);
-    text.setPosition(230, 15);
+    text.setPosition(225, 15);
 
     while (isMenu)
     {
@@ -105,7 +105,7 @@ void Second(RenderWindow& window)
                     
             }
         }
-        text.setString("Choice test block");
+        text.setString("Choose a test block");
         window.setTitle("English Word");
         window.clear(sf::Color(21, 132, 149));
         window.draw(BackGrSprite);
