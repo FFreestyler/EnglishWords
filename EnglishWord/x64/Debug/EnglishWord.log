@@ -29,8 +29,8 @@ C:\EnglishWords\EnglishWord\TextBox.h(111,70): warning C4244: аргумент: 
           [
               T=float
           ]
-C:\EnglishWords\EnglishWord\Test.h(43,31): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-C:\EnglishWords\EnglishWord\Test.h(47,45): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+C:\EnglishWords\EnglishWord\Test.h(60,31): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\EnglishWords\EnglishWord\Test.h(64,45): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
           with
           [
               T=float

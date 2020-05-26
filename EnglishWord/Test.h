@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include<iostream>
+#include<string>
 #include<fstream>
 #include<vector>
 #include<functional>
@@ -8,12 +9,15 @@
 #include "TextBox.h"
 
 using namespace sf;
+using namespace std;
 
-void Test(RenderWindow& window)
+void Test(RenderWindow& window, string testnumber)
 {
 	const int height = 480; //Высота окна
 	const int width = 720; //Ширина окна
 	const int GUI_TEXT_MAX = 24;
+	const int wordquantity = 10;
+	sf::String words[2][wordquantity];
 	TextField field;
 
 	Texture exTexture;
@@ -39,11 +43,24 @@ void Test(RenderWindow& window)
 	text.setStyle(Text::Bold);
 	text.setPosition(230, 15);
 
-	sf::String word[10] = { "Ras"};
+	ifstream wordsfile;
+	string tmpstr;
+	wordsfile.open("tests/" + testnumber);
+	int wordnumber = 0;
+	while (!wordsfile.eof())
+	{
+		wordsfile >> tmpstr;
+		words[0][wordnumber] = tmpstr;
+		wordsfile >> tmpstr;
+		words[1][wordnumber] = tmpstr;
+		wordnumber++;
+	}
+	wordsfile.close();
+
 	text.setPosition((width / 2) - (field.getCharactersize() * (GUI_TEXT_MAX / 2 + 1)) / 2, height / 2 - 40);
-	text.setString(word[0]);
+	text.setString(words[0][0]);
 	field.setFont(font);
-	field.setPlaceholder("Ваш ответ");
+	field.setPlaceholder("Your answer");
 	field.setPosition(sf::Vector2f((width / 2) - (field.getCharactersize() * (GUI_TEXT_MAX / 2 + 1))/2, height / 2));
 	field.open();
 

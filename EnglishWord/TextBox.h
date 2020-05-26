@@ -11,7 +11,7 @@ const int GUI_TEXT_MAX = 24;
 const int GUI_TEXT_BACKSPACE = 8;
 const int GUI_TEXT_ESCAPE = 27;
 
-const sf::Color GUI_TEXT_GRAY = sf::Color(105, 105, 105);
+const sf::Color GUI_TEXT_WHITE = sf::Color(255, 255, 255);
 
 class TextField {
 public:
@@ -36,7 +36,7 @@ public:
 	void setPosition(sf::Vector2f vec)
 	{
 		box.setPosition(vec);
-		txt.setPosition(vec + sf::Vector2f(5, 5));
+		txt.setPosition(vec - sf::Vector2f(120, -5));
 	}
 
 	void input(sf::Event ev)
@@ -93,7 +93,7 @@ public:
 	{
 		placeholder = str;
 		renderPlaceholder = true;
-		txt.setFillColor(GUI_TEXT_GRAY);
+		txt.setFillColor(GUI_TEXT_WHITE);
 		txt.setString(placeholder);
 		setActive(false);
 	}
@@ -151,11 +151,11 @@ private:
 			box.setOutlineColor(sf::Color::White);
 		}
 
-		if (renderPlaceholder && arg) {
+		/*if (renderPlaceholder && arg) {
 			renderPlaceholder = false;
 			txt.setString("");
 			txt.setFillColor(sf::Color::Black);
-		}
+		}*/
 	}
 	
 	bool active;
