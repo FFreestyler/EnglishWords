@@ -20,7 +20,7 @@ void Second(RenderWindow& window)
     ex.setPosition(274, 434);
 
     Image BackGr;
-    BackGr.loadFromFile("images/backgr1.png");
+    BackGr.loadFromFile("images/backgr.png");
     Texture BackGrTexture;
     BackGrTexture.loadFromImage(BackGr);
     Sprite BackGrSprite;
@@ -28,20 +28,18 @@ void Second(RenderWindow& window)
     BackGrSprite.setPosition(0, 0);
 
     Texture testbut1, testbut2, testbut3, testbut4, testbut5, testbut6, testbut7, testbut8, testbut9, testbut10;
-    testbut1.loadFromFile("images/testbutsecond/testbut1.png");
-    testbut2.loadFromFile("images/testbutsecond/testbut2.png");
-    testbut3.loadFromFile("images/testbutsecond/testbut3.png");
-    testbut4.loadFromFile("images/testbutsecond/testbut4.png");
-    testbut5.loadFromFile("images/testbutsecond/testbut5.png");
-    testbut6.loadFromFile("images/testbutsecond/testbut6.png");
-    testbut7.loadFromFile("images/testbutsecond/testbut7.png");
-    testbut8.loadFromFile("images/testbutsecond/testbut8.png");
-    testbut9.loadFromFile("images/testbutsecond/testbut9.png");
-    testbut10.loadFromFile("images/testbutsecond/testbut10.png");
+    testbut1.loadFromFile("images/testbutfirst/testbut1.png");
+    testbut2.loadFromFile("images/testbutfirst/testbut2.png");
+    testbut3.loadFromFile("images/testbutfirst/testbut3.png");
+    testbut4.loadFromFile("images/testbutfirst/testbut4.png");
+    testbut5.loadFromFile("images/testbutfirst/testbut5.png");
+    testbut6.loadFromFile("images/testbutfirst/testbut6.png");
+    testbut7.loadFromFile("images/testbutfirst/testbut7.png");
+    testbut8.loadFromFile("images/testbutfirst/testbut8.png");
+    testbut9.loadFromFile("images/testbutfirst/testbut9.png");
+    testbut10.loadFromFile("images/testbutfirst/testbut10.png");
     Sprite testbut1Texture(testbut1), testbut2Texture(testbut2), testbut3Texture(testbut3), testbut4Texture(testbut4), testbut5Texture(testbut5),
         testbut6Texture(testbut6), testbut7Texture(testbut7), testbut8Texture(testbut8), testbut9Texture(testbut9), testbut10Texture(testbut10);
-    //bool isMenu = 1;
-    //int MenuNum = 0;
     testbut1Texture.setPosition(50, 50);
     testbut2Texture.setPosition(269, 50);
     testbut3Texture.setPosition(488, 50);
@@ -57,7 +55,7 @@ void Second(RenderWindow& window)
     font.loadFromFile("Winter Snow.ttf");
     Text text("", font, 28);
     text.setStyle(Text::Bold);
-    text.setPosition(230, 15);
+    text.setPosition(225, 15);
 
     while (isMenu)
     {
@@ -107,7 +105,7 @@ void Second(RenderWindow& window)
                     
             }
         }
-        text.setString("Choice test block");
+        text.setString("Choose a test block");
         window.setTitle("English Word");
         window.clear(sf::Color(21, 132, 149));
         window.draw(BackGrSprite);

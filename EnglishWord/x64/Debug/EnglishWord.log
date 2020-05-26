@@ -35,4 +35,5 @@ C:\EnglishWords\EnglishWord\Test.h(64,45): warning C4244: аргумент: пр
           [
               T=float
           ]
+C:\EnglishWords\EnglishWord\Menu.h(74,15): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
   EnglishWord.vcxproj -> C:\EnglishWords\x64\Debug\EnglishWord.exe
