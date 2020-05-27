@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions xmlns="clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework">
+  <Rule Name="ReferencedPackagesd429afa6-a202-4c34-a6bf-aac1c0f0897b" PageTemplate="tool" DisplayName="Referenced Packages" SwitchPrefix="/" Order="1">
+    <Rule.Categories>
+      <Category Name="sfml_window" DisplayName="sfml_window" />
+    </Rule.Categories>
+    <Rule.DataSource>
+      <DataSource Persistence="ProjectFile" ItemType="" />
+    </Rule.DataSource>
+    <EnumProperty Name="Linkage-sfml_window" DisplayName="Linkage" Description="Which version of the .lib file to link to this library" Category="sfml_window">
+      <EnumValue Name="" DisplayName="Dynamic Library (DLL)" />
+      <EnumValue Name="static" DisplayName="Static" />
+    </EnumProperty>
+  </Rule>
+</ProjectSchemaDefinitions>

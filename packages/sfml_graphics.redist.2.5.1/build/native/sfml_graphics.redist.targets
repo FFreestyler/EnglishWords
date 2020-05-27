@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="sfml_graphics_redist_init;sfml_graphics_redist_init_2">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-sfml_graphics_redist Condition="'$(Linkage-sfml_graphics_redist)' == ''">dynamic</Linkage-sfml_graphics_redist>
+    <CallingConvention-sfml_graphics_redist Condition="'$(CallingConvention-sfml_graphics_redist)' == ''">cdecl</CallingConvention-sfml_graphics_redist>
+  </PropertyGroup>
+  <Target Name="sfml_graphics_redist_init">
+    <sfml_graphics_redist_Contains Text="Linkage-dynamic" Library="sfml_graphics_redist" Value="dynamic" Condition="'$(Linkage-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+    <sfml_graphics_redist_Contains Text="Linkage-static" Library="sfml_graphics_redist" Value="static" Condition="'$(Linkage-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+    <sfml_graphics_redist_Contains Text="Linkage-ltcg" Library="sfml_graphics_redist" Value="ltcg" Condition="'$(Linkage-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+    <sfml_graphics_redist_Contains Text="Linkage-sxs" Library="sfml_graphics_redist" Value="sxs" Condition="'$(Linkage-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+    <sfml_graphics_redist_Contains Text="CallingConvention-cdecl" Library="sfml_graphics_redist" Value="cdecl" Condition="'$(CallingConvention-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+    <sfml_graphics_redist_Contains Text="CallingConvention-stdcall" Library="sfml_graphics_redist" Value="stdcall" Condition="'$(CallingConvention-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+    <sfml_graphics_redist_Contains Text="CallingConvention-fastcall" Library="sfml_graphics_redist" Value="fastcall" Condition="'$(CallingConvention-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+    <sfml_graphics_redist_Contains Text="CallingConvention-thiscall" Library="sfml_graphics_redist" Value="thiscall" Condition="'$(CallingConvention-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+    <sfml_graphics_redist_Contains Text="CallingConvention-clrcall" Library="sfml_graphics_redist" Value="clrcall" Condition="'$(CallingConvention-sfml_graphics_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-sfml_graphics_redist" />
+    </sfml_graphics_redist_Contains>
+  </Target>
+  <Target Name="sfml_graphics_redist_init_2">
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v120\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v120\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v140\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v140\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v141\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v141\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v120\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v120\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v140\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v140\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v141\Debug\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v141\Release\dynamic">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+  </Target>
+  <ItemGroup Label="Win32 and v120 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v120\Debug\dynamic\sfml-graphics-d-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v120 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v120\Release\dynamic\sfml-graphics-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v140 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v140\Debug\dynamic\sfml-graphics-d-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v140 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v140\Release\dynamic\sfml-graphics-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v141 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v141\Debug\dynamic\sfml-graphics-d-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="Win32 and v141 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v141\Release\dynamic\sfml-graphics-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v120 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v120\Debug\dynamic\sfml-graphics-d-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v120 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v120\Release\dynamic\sfml-graphics-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v140 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v140\Debug\dynamic\sfml-graphics-d-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v140 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v140\Release\dynamic\sfml-graphics-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v141 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v141\Debug\dynamic\sfml-graphics-d-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64 and v141 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v141\Release\dynamic\sfml-graphics-2.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <Target Name="sfml_graphics_redist_AfterBuild" AfterTargets="AfterBuild" />
+  <Target Name="sfml_graphics_redist_AfterBuild_Win32_and_v120_and_Debug_and_dynamic" Label="Win32 and v120 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v120\Debug\dynamic\sfml-graphics-d-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_Win32_and_v120_and_Release_and_dynamic" Label="Win32 and v120 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v120\Release\dynamic\sfml-graphics-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_Win32_and_v140_and_Debug_and_dynamic" Label="Win32 and v140 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v140\Debug\dynamic\sfml-graphics-d-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_Win32_and_v140_and_Release_and_dynamic" Label="Win32 and v140 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v140\Release\dynamic\sfml-graphics-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_Win32_and_v141_and_Debug_and_dynamic" Label="Win32 and v141 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v141\Debug\dynamic\sfml-graphics-d-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_Win32_and_v141_and_Release_and_dynamic" Label="Win32 and v141 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'win32' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\v141\Release\dynamic\sfml-graphics-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_x64_and_v120_and_Debug_and_dynamic" Label="x64 and v120 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v120\Debug\dynamic\sfml-graphics-d-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_x64_and_v120_and_Release_and_dynamic" Label="x64 and v120 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v120' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v120\Release\dynamic\sfml-graphics-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_x64_and_v140_and_Debug_and_dynamic" Label="x64 and v140 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v140\Debug\dynamic\sfml-graphics-d-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_x64_and_v140_and_Release_and_dynamic" Label="x64 and v140 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v140' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v140\Release\dynamic\sfml-graphics-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_x64_and_v141_and_Debug_and_dynamic" Label="x64 and v141 and Debug and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) &gt; -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v141\Debug\dynamic\sfml-graphics-d-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="sfml_graphics_redist_AfterBuild_x64_and_v141_and_Release_and_dynamic" Label="x64 and v141 and Release and dynamic" Condition="'$(Platform.ToLower())' == 'x64' And '$(PlatformToolset.ToLower())' == 'v141' And ( $(Configuration.ToLower().IndexOf('debug')) == -1 ) And '$(Linkage-sfml_graphics_redist.ToLower())' == 'dynamic'" AfterTargets="sfml_graphics_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\v141\Release\dynamic\sfml-graphics-2.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <UsingTask TaskName="sfml_graphics_redist_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+</Project>
