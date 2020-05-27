@@ -1,0 +1,9 @@
+Man мужчина
+Family семья
+Parents родители
+Father отец
+Mother мама
+Daughter дочь
+Brother брат
+People люди
+Woman женщина
