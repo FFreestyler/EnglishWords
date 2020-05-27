@@ -46,7 +46,7 @@ void Test(RenderWindow& window, string testnumber)
 
 
 	Font font;
-	font.loadFromFile("cyrillicold.ttf");
+	font.loadFromFile("font.ttf");
 	const int textsize = 28;
 	Text text("", font, textsize);
 	text.setStyle(Text::Bold);
@@ -111,6 +111,7 @@ void Test(RenderWindow& window, string testnumber)
 					if (MenuNum == 1)
 					{
 						string firstword = field.getText();
+						transform(firstword.begin(), firstword.end(), firstword.begin(), tolower);
 						string secondword = words[0][wordcounter];
 						if (firstword == secondword)
 						{
