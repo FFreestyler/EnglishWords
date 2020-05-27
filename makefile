@@ -5,7 +5,7 @@ SFML2 = -I SFML-2.5.1/include -L SFML-2.5.1/lib
 OUT = out
 DIR = build
 DIR2 = bin
-DIR3 = src
+DIR3 = source
 PRE = cxxtestgen --error-printer
 RUN = runner
 .PHONY: all prog runprog clean
