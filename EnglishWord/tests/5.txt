@@ -1,0 +1,10 @@
+duck Утка
+country Страна
+city Город
+building здание
+place Место
+exit Выход
+center Центр
+roof Крыша
+school Школа
+theater Театр

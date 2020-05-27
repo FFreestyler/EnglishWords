@@ -107,12 +107,30 @@ void Second(RenderWindow& window)
                         { 
                             Test(window, "4.txt");
                         }
-                        if (MenuNum == 5) { printf("5"); }
-                        if (MenuNum == 6) { printf("6"); }
-                        if (MenuNum == 7) { printf("7"); }
-                        if (MenuNum == 8) { printf("8"); }
-                        if (MenuNum == 9) { printf("9"); }
-                        if (MenuNum == 10) { printf("10"); }
+                        if (MenuNum == 5) 
+                        { 
+                            Test(window, "5.txt");
+                        }
+                        if (MenuNum == 6) 
+                        {
+                            Test(window, "6.txt");
+                        }
+                        if (MenuNum == 7) 
+                        { 
+                            printf("7"); 
+                        }
+                        if (MenuNum == 8) 
+                        { 
+                            printf("8"); 
+                        }
+                        if (MenuNum == 9) 
+                        { 
+                            printf("9"); 
+                        }
+                        if (MenuNum == 10) 
+                        { 
+                            printf("10"); 
+                        }
                     }
                     
             }
