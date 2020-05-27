@@ -41,10 +41,10 @@ void menu(RenderWindow & window)
 	SCloudSprite.setPosition(550, 200);
 
 	Font font;
-	font.loadFromFile("TimesNewRoman.ttf");
+	font.loadFromFile("Winter Snow.ttf");
 	Text text("", font, 30);
 	text.setStyle(Text::Bold);
-	text.setPosition(281, 120);
+	text.setPosition(260, 120);
 
 	sf::Clock clock;
 
@@ -71,7 +71,7 @@ void menu(RenderWindow & window)
 					if (MenuNum == 3) { window.close(); isMenu = false; }
 			}
 		}
-		window.setTitle("English Word");
+		window.setTitle("English Words");
 		window.clear(sf::Color(71, 202, 221));
 		text.setString("English Words");
 		window.draw(text);

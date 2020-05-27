@@ -45,7 +45,7 @@ void Verify(RenderWindow& window, string verify, string correctw)
 	nextButton.setPosition(290,390);
 
 	Font font;
-	font.loadFromFile("TimesNewRoman.ttf");
+	font.loadFromFile("Domkrat Bold.ttf");
 	Text text("", font, 30);
 	text.setStyle(Text::Bold);
 	text.setPosition(281, 120);
