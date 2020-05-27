@@ -52,7 +52,7 @@ void Second(RenderWindow& window)
     testbut10Texture.setPosition(269, 335);
 
     Font font;
-    font.loadFromFile("TimesNewRoman.ttf");
+    font.loadFromFile("Winter Snow.ttf");
     Text text("", font, 28);
     text.setStyle(Text::Bold);
     text.setPosition(225, 15);

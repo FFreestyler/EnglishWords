@@ -40,14 +40,14 @@ void Test(RenderWindow& window, string testnumber)
 	BackGrSprite.setPosition(0, 0);
 
 	Texture VerifyTexture;
-	VerifyTexture.loadFromFile("images/button4.png");
+	VerifyTexture.loadFromFile("images/verifyb.png");
 	Sprite VerifyButton(VerifyTexture);
 	VerifyButton.setPosition(524, 434);
 
 
 	Font font;
-	font.loadFromFile("cyrillicold.ttf");
-	const int textsize = 28;
+	font.loadFromFile("17904.ttf");
+	const int textsize = 25;
 	Text text("", font, textsize);
 	text.setStyle(Text::Bold);
 	text.setPosition(230, 15);
