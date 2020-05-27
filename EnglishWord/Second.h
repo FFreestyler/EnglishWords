@@ -91,8 +91,14 @@ void Second(RenderWindow& window)
                     else
                     {
 
-                        if (MenuNum == 1) { Test(window,"1.txt"); }
-                        if (MenuNum == 2) { printf("2"); }
+                        if (MenuNum == 1) 
+                        { 
+                            Test(window,"1.txt"); 
+                        }
+                        if (MenuNum == 2) 
+                        { 
+                            Test(window, "2.txt"); 
+                        }
                         if (MenuNum == 3) { printf("3"); }
                         if (MenuNum == 4) { printf("4"); }
                         if (MenuNum == 5) { printf("5"); }
