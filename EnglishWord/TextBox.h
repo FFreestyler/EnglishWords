@@ -6,7 +6,7 @@
 #include <SFML/Graphics.hpp>
 
 
-const int GUI_TEXT_MAX = 24;
+const int GUI_TEXT_MAX = 21;
 
 const int GUI_TEXT_BACKSPACE = 8;
 const int GUI_TEXT_ESCAPE = 27;
@@ -36,7 +36,7 @@ public:
 	void setPosition(sf::Vector2f vec)
 	{
 		box.setPosition(vec);
-		txt.setPosition(vec - sf::Vector2f(120, -5));
+		txt.setPosition(vec + sf::Vector2f(0, 5));
 	}
 
 	void input(sf::Event ev)
@@ -66,7 +66,7 @@ public:
 			else {
 				sf::String sfstr = "";
 				sfstr += ev.text.unicode;
-				str += sfstr.toAnsiString();
+				str += sfstr.toUtf32();
 			}
 
 			if (str.getSize() == size) return;
@@ -102,6 +102,11 @@ public:
 	{
 		window.draw(box);
 		window.draw(txt);
+	}
+
+	void clearfield()
+	{
+		return txt.setString("");
 	}
 
 	void setLength(int arg)
@@ -150,12 +155,6 @@ private:
 		else {
 			box.setOutlineColor(sf::Color::White);
 		}
-
-		/*if (renderPlaceholder && arg) {
-			renderPlaceholder = false;
-			txt.setString("");
-			txt.setFillColor(sf::Color::Black);
-		}*/
 	}
 	
 	bool active;
