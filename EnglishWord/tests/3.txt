@@ -1,0 +1,10 @@
+actor Актер
+student Студент
+pupil Школьник
+cat Кот
+dog Собака
+bird Птица
+wolf Волк
+cow Корова
+rat Крыса
+rabbit Кролик

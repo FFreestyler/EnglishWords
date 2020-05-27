@@ -36,7 +36,7 @@ public:
 	void setPosition(sf::Vector2f vec)
 	{
 		box.setPosition(vec);
-		txt.setPosition(vec + sf::Vector2f(0, 5));
+		txt.setPosition(vec + sf::Vector2f(0, 2));
 	}
 
 	void input(sf::Event ev)

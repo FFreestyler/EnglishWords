@@ -63,7 +63,7 @@ void Verify(RenderWindow& window, string verify, string correctw)
 		text.setString(L"Ответ неверный");
 		text.setPosition(260, 210);
 		text1.setPosition(260, 240);
-		CorrectWord.setPosition(450, 240);
+		CorrectWord.setPosition(430, 240);
 	}
 
 	sf::Clock clock;

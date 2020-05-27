@@ -99,8 +99,14 @@ void Second(RenderWindow& window)
                         { 
                             Test(window, "2.txt"); 
                         }
-                        if (MenuNum == 3) { printf("3"); }
-                        if (MenuNum == 4) { printf("4"); }
+                        if (MenuNum == 3) 
+                        { 
+                            Test(window, "3.txt");
+                        }
+                        if (MenuNum == 4) 
+                        { 
+                            Test(window, "4.txt");
+                        }
                         if (MenuNum == 5) { printf("5"); }
                         if (MenuNum == 6) { printf("6"); }
                         if (MenuNum == 7) { printf("7"); }

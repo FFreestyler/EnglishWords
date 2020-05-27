@@ -1,0 +1,10 @@
+goose Гусь
+horse лошадь
+fox Лиса
+giraffe Жираф
+frog Лягушка
+bear Медведь
+mouse Мышь
+pig Свинья
+monkey Обезьяна
+elephant Слон
