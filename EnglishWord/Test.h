@@ -46,13 +46,8 @@ void Test(RenderWindow& window, string testnumber)
 
 
 	Font font;
-<<<<<<< HEAD
 	font.loadFromFile("font.ttf");
-	const int textsize = 28;
-=======
-	font.loadFromFile("17904.ttf");
 	const int textsize = 25;
->>>>>>> 29df9c7272275c2e410f6701cfd742b7f920608f
 	Text text("", font, textsize);
 	text.setStyle(Text::Bold);
 	text.setPosition(230, 15);
