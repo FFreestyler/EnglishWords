@@ -5,6 +5,6 @@ light Светлый
 intelligent Умный
 judge Судья
 island Остров
-honey Мёд
+honey Мед
 graph График
 mistake Ошибка
