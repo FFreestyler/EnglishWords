@@ -1,5 +1,4 @@
-helicopter Вертолёт
-mistake Ошибка
+helicopter Вертолет
 kettle Чайник
 mercy Милосердие
 light Светлый
@@ -8,3 +7,4 @@ judge Судья
 island Остров
 honey Мёд
 graph График
+mistake Ошибка
