@@ -1,0 +1,10 @@
+exception Исключение
+phenomenon Феномен
+regularly Регулярно
+government Правительство
+performance Выступление
+millennium Тысячелетие
+precision Точность
+applause Аплодисменты
+chairman Председатель
+impact Влияние
