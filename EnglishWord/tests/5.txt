@@ -1,7 +1,7 @@
 duck Утка
 country Страна
 city Город
-building здание
+building Здание
 place Место
 exit Выход
 center Центр

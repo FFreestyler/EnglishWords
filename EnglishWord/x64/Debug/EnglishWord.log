@@ -35,4 +35,5 @@ C:\EnglishWords\EnglishWord\Test.h(73,45): warning C4244: аргумент: пр
           [
               T=float
           ]
+C:\EnglishWords\EnglishWord\wordscheck.h(163,37): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
   EnglishWord.vcxproj -> C:\EnglishWords\x64\Debug\EnglishWord.exe

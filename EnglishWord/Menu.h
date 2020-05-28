@@ -5,20 +5,23 @@
 #include<vector>
 #include<functional>
 #include "Second.h"
+#include "wordscheck.h"
 
 using namespace sf;
 using namespace std;
 
 void menu(RenderWindow & window)
 {
-	Texture menuTexture2, menuTexture3;
+	Texture menuTexture1,menuTexture2, menuTexture3;
 	menuTexture2.loadFromFile("images/button1.png");
+	menuTexture1.loadFromFile("images/button2.png");
 	menuTexture3.loadFromFile("images/button3.png");
-	Sprite button2(menuTexture2), button3(menuTexture3);
+	Sprite button1(menuTexture1), button2(menuTexture2), button3(menuTexture3);
 	bool isMenu = 1;
 	int MenuNum = 0;
-	button2.setPosition(300, 200);
-	button3.setPosition(300, 350);
+	button2.setPosition(300, 140);
+	button1.setPosition(300, 260);
+	button3.setPosition(300, 380);
 
 	Image FirstCloud;
 	FirstCloud.loadFromFile("images/Cloud.png");
@@ -44,7 +47,7 @@ void menu(RenderWindow & window)
 	font.loadFromFile("Winter Snow.ttf");
 	Text text("", font, 30);
 	text.setStyle(Text::Bold);
-	text.setPosition(260, 120);
+	text.setPosition(260, 80);
 
 	sf::Clock clock;
 
@@ -53,8 +56,9 @@ void menu(RenderWindow & window)
 		MenuNum = 0;
 		Event event;
 
-		if (IntRect(300, 200, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 2; }
-		if (IntRect(300, 350, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 3; }
+		if (IntRect(300, 140, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 1; }
+		if (IntRect(300, 260, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 2; }
+		if (IntRect(300, 380, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 3; }
 
 		while (window.pollEvent(event))
 		{
@@ -65,10 +69,22 @@ void menu(RenderWindow & window)
 				window.close();
 			}
 
-			if (event.type == Event::MouseButtonReleased) {
+			if (event.type == Event::MouseButtonReleased) 
+			{
 				if (event.mouseButton.button == Mouse::Left)
-					if (MenuNum == 2) { Second(window); }
-					if (MenuNum == 3) { window.close(); isMenu = false; }
+					if (MenuNum == 1) 
+					{ 
+						Second(window); 
+					}
+					if (MenuNum == 2)
+					{
+						wordscheck(window);
+					}
+					if (MenuNum == 3) 
+					{
+						window.close(); 
+						isMenu = false; 
+					}
 			}
 		}
 		window.setTitle("English Words");
@@ -77,6 +93,7 @@ void menu(RenderWindow & window)
 		window.draw(text);
 		window.draw(FCloudSprite);
 		window.draw(SCloudSprite);
+		window.draw(button1);
 		window.draw(button2);
 		window.draw(button3);
 

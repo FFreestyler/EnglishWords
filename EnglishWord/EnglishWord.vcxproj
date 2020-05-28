@@ -158,6 +158,7 @@
     <ClInclude Include="Test.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="Verify.h" />
+    <ClInclude Include="wordscheck.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
