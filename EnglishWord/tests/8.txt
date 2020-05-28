@@ -1,0 +1,10 @@
+helicopter Вертолёт
+mistake Ошибка
+kettle Чайник
+mercy Милосердие
+light Светлый
+intelligent Умный
+judge Судья
+island Остров
+honey Мёд
+graph График
