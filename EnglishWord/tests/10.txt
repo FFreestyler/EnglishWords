@@ -1,10 +1,10 @@
-exception РСЃРєР»СЋС‡РµРЅРёРµ
-phenomenon Р¤РµРЅРѕРјРµРЅ
-regularly Р РµРіСѓР»СЏСЂРЅРѕ
-government РџСЂР°РІРёС‚РµР»СЊСЃС‚РІРѕ
-performance Р’С‹СЃС‚СѓРїР»РµРЅРёРµ
-millennium РўС‹СЃСЏС‡РµР»РµС‚РёРµ
-precision РўРѕС‡РЅРѕСЃС‚СЊ
-applause РђРїР»РѕРґРёСЃРјРµРЅС‚С‹
-chairman РџСЂРµРґСЃРµРґР°С‚РµР»СЊ
-impact Р’Р»РёСЏРЅРёРµ
+exception Исключение
+phenomenon Феномен
+regularly Регулярно
+government Правительство
+performance Выступление
+millennium Тысячелетие
+precision Точность
+applause Аплодисменты
+chairman Председатель
+impact Влияние
