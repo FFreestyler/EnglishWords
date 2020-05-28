@@ -117,19 +117,19 @@ void Second(RenderWindow& window)
                         }
                         if (MenuNum == 7) 
                         { 
-                            printf("7"); 
+                            Test(window, "7.txt");
                         }
                         if (MenuNum == 8) 
                         { 
-                            printf("8"); 
+                            Test(window, "8.txt");
                         }
                         if (MenuNum == 9) 
                         { 
-                            printf("9"); 
+                            Test(window, "9.txt");
                         }
                         if (MenuNum == 10) 
                         { 
-                            printf("10"); 
+                            Test(window, "10.txt"); 
                         }
                     }
                     
