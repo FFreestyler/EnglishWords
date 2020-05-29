@@ -3,4 +3,4 @@
 
 void Second(RenderWindow& window);
 
-#endif START_HPP
+#endif

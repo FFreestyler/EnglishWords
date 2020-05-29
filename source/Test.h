@@ -3,4 +3,4 @@
 
 void Test(RenderWindow& window, string testnumber);
 
-#endif TEST_HPP
+#endif

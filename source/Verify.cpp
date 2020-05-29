@@ -4,23 +4,15 @@
 #include<vector>
 #include<functional>
 #include "Second.h"
-#include "wordscheck.h"
 
 using namespace sf;
 using namespace std;
 
-void menu(RenderWindow & window)
+void Verify(RenderWindow& window, string verify, string correctw)
 {
-	Texture menuTexture1,menuTexture2, menuTexture3;
-	menuTexture2.loadFromFile("images/button1.png");
-	menuTexture1.loadFromFile("images/button2.png");
-	menuTexture3.loadFromFile("images/button3.png");
-	Sprite button1(menuTexture1), button2(menuTexture2), button3(menuTexture3);
+	
 	bool isMenu = 1;
 	int MenuNum = 0;
-	button2.setPosition(300, 140);
-	button1.setPosition(300, 260);
-	button3.setPosition(300, 380);
 
 	Image FirstCloud;
 	FirstCloud.loadFromFile("images/Cloud.png");
@@ -42,11 +34,35 @@ void menu(RenderWindow & window)
 	SCloudSprite.setTexture(SCloudTexture);
 	SCloudSprite.setPosition(550, 200);
 
+	Texture nextButtonTexture;
+	Image Button;
+	Button.loadFromFile("images/nextButton.png");
+	nextButtonTexture.loadFromImage(Button);
+	Sprite nextButton;
+	nextButton.setTexture(nextButtonTexture);
+	nextButton.setPosition(290,390);
+
 	Font font;
-	font.loadFromFile("Winter Snow.ttf");
+	font.loadFromFile("Domkrat Bold.ttf");
 	Text text("", font, 30);
 	text.setStyle(Text::Bold);
-	text.setPosition(260, 80);
+	text.setPosition(281, 120);
+
+	Text text1(L"Верный ответ:", font, 30);
+	Text CorrectWord(correctw, font, 30);
+
+	if (verify == "y")
+	{
+		text.setString(L"Ответ верный");
+		text.setPosition(270, 210);
+	}
+	else
+	{
+		text.setString(L"Ответ неверный");
+		text.setPosition(260, 210);
+		text1.setPosition(260, 240);
+		CorrectWord.setPosition(430, 240);
+	}
 
 	sf::Clock clock;
 
@@ -55,9 +71,7 @@ void menu(RenderWindow & window)
 		MenuNum = 0;
 		Event event;
 
-		if (IntRect(300, 140, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 1; }
-		if (IntRect(300, 260, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 2; }
-		if (IntRect(300, 380, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 3; }
+		if (IntRect(290, 390, 150, 75).contains(Mouse::getPosition(window))) { MenuNum = 1; }
 
 		while (window.pollEvent(event))
 		{
@@ -68,33 +82,28 @@ void menu(RenderWindow & window)
 				window.close();
 			}
 
-			if (event.type == Event::MouseButtonReleased) 
+			if (event.type == Event::MouseButtonReleased)
 			{
 				if (event.mouseButton.button == Mouse::Left)
-					if (MenuNum == 1) 
-					{ 
-						Second(window); 
-					}
-					if (MenuNum == 2)
+				{
+					if (MenuNum == 1)
 					{
-						wordscheck(window);
+						isMenu = false;
 					}
-					if (MenuNum == 3) 
-					{
-						window.close(); 
-						isMenu = false; 
-					}
+				}
 			}
 		}
-		window.setTitle("English Words");
+		window.setTitle("English Word");
 		window.clear(sf::Color(71, 202, 221));
-		text.setString("English Words");
 		window.draw(text);
+		if (verify == "n")
+		{
+			window.draw(text1);
+			window.draw(CorrectWord);
+		}
+		window.draw(nextButton);
 		window.draw(FCloudSprite);
 		window.draw(SCloudSprite);
-		window.draw(button1);
-		window.draw(button2);
-		window.draw(button3);
 
 		window.display();
 	}
