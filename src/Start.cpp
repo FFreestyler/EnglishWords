@@ -1,6 +1,6 @@
-#include "Menu.h"
-#include "Second.h"
-#include "Test.h"
+#include "Menu.hpp"
+#include "Start.hpp"
+#include "Test.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <functional>

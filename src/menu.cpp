@@ -1,5 +1,5 @@
-#include "Second.h"
-#include "wordscheck.h"
+#include "Start.hpp"
+#include "wordscheck.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <functional>

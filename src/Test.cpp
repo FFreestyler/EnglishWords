@@ -1,6 +1,6 @@
-#include "Menu.h"
-#include "TextBox.h"
-#include "Verify.h"
+#include "Menu.hpp"
+#include "TextBox.hpp"
+#include "Verify.hpp"
 #include <SFML/Graphics.hpp>
 #include <codecvt>
 #include <fstream>

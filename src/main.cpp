@@ -1,5 +1,5 @@
-#include "Menu.h"
-#include "Start.h"
+#include "Menu.hpp"
+#include "Start.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <functional>
