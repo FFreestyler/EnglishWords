@@ -1,168 +1,152 @@
-#include <SFML/Graphics.hpp>
-#include<iostream>
-#include<fstream>
-#include<vector>
-#include<functional>
 #include "Second.h"
+#include <SFML/Graphics.hpp>
+#include <fstream>
+#include <functional>
+#include <iostream>
+#include <vector>
 
 using namespace sf;
 using namespace std;
 
 void wordscheck(RenderWindow& window)
 {
-	Texture menuTexture1, menuTexture2, menuTexture3;
-	menuTexture1.loadFromFile("images/nextButtonSmall.png");
-	menuTexture2.loadFromFile("images/ex.png");
-	menuTexture3.loadFromFile("images/backButtonSmall.png");
-	
-	Sprite button1(menuTexture1), button2(menuTexture2), button3(menuTexture3);
-	bool isMenu = 1;
-	int MenuNum = 0;
+    Texture menuTexture1, menuTexture2, menuTexture3;
+    menuTexture1.loadFromFile("images/nextButtonSmall.png");
+    menuTexture2.loadFromFile("images/ex.png");
+    menuTexture3.loadFromFile("images/backButtonSmall.png");
 
-	button1.setPosition(510, 430);
-	button2.setPosition(260, 430);
-	button3.setPosition(10, 430);
+    Sprite button1(menuTexture1), button2(menuTexture2), button3(menuTexture3);
+    bool isMenu = 1;
+    int MenuNum = 0;
 
-	Image FirstCloud;
-	FirstCloud.loadFromFile("images/Cloud.png");
+    button1.setPosition(510, 430);
+    button2.setPosition(260, 430);
+    button3.setPosition(10, 430);
 
-	Texture FCloudTexture;
-	FCloudTexture.loadFromImage(FirstCloud);
+    Image FirstCloud;
+    FirstCloud.loadFromFile("images/Cloud.png");
 
-	Sprite FCloudSprite;
-	FCloudSprite.setTexture(FCloudTexture);
-	FCloudSprite.setPosition(-65, 35);
+    Texture FCloudTexture;
+    FCloudTexture.loadFromImage(FirstCloud);
 
-	Image SecondCloud;
-	SecondCloud.loadFromFile("images/SCloud.png");
+    Sprite FCloudSprite;
+    FCloudSprite.setTexture(FCloudTexture);
+    FCloudSprite.setPosition(-65, 35);
 
-	Texture SCloudTexture;
-	SCloudTexture.loadFromImage(SecondCloud);
+    Image SecondCloud;
+    SecondCloud.loadFromFile("images/SCloud.png");
 
-	Sprite SCloudSprite;
-	SCloudSprite.setTexture(SCloudTexture);
-	SCloudSprite.setPosition(550, 200);
+    Texture SCloudTexture;
+    SCloudTexture.loadFromImage(SecondCloud);
 
-	Font font;
-	font.loadFromFile("font.ttf");
-	Text text("", font, 30);
-	text.setStyle(Text::Bold);
-	text.setPosition(260, 80);
+    Sprite SCloudSprite;
+    SCloudSprite.setTexture(SCloudTexture);
+    SCloudSprite.setPosition(550, 200);
 
-	sf::Clock clock;
+    Font font;
+    font.loadFromFile("font.ttf");
+    Text text("", font, 30);
+    text.setStyle(Text::Bold);
+    text.setPosition(260, 80);
 
-	const int wordquantity = 10;
-	sf::String words[2][wordquantity];
+    sf::Clock clock;
 
-	char testnumber = '1';
+    const int wordquantity = 10;
+    sf::String words[2][wordquantity];
 
-	ifstream wordsfile;
+    char testnumber = '1';
 
-	string tmpstr, path;
-	path = "tests/";
-	path += testnumber;
-	path += ".txt";
-	wordsfile.open(path);
-	int wordnumber = 0;
-	while (!wordsfile.eof())
-	{
-		wordsfile >> tmpstr;
-		words[0][wordnumber] = sf::String(tmpstr);
-		wordsfile >> tmpstr;
-		words[1][wordnumber] = sf::String(tmpstr);
-		wordnumber++;
-	}
-	wordsfile.close();
+    ifstream wordsfile;
 
-	while (isMenu)
-	{
-		MenuNum = 0;
-		Event event;
+    string tmpstr, path;
+    path = "tests/";
+    path += testnumber;
+    path += ".txt";
+    wordsfile.open(path);
+    int wordnumber = 0;
+    while (!wordsfile.eof()) {
+        wordsfile >> tmpstr;
+        words[0][wordnumber] = sf::String(tmpstr);
+        wordsfile >> tmpstr;
+        words[1][wordnumber] = sf::String(tmpstr);
+        wordnumber++;
+    }
+    wordsfile.close();
 
-		if (IntRect(260, 430, 173, 32).contains(Mouse::getPosition(window))) 
-		{ 
-			MenuNum = 1; 
-		}
-		if (testnumber != '9')
-		{
-			if (IntRect(510, 430, 173, 32).contains(Mouse::getPosition(window))) 
-			{ 
-				MenuNum = 2; 
-			}
-		}
-		if (testnumber != '1')
-		{
-			if (IntRect(10, 430, 173, 32).contains(Mouse::getPosition(window))) 
-			{ 
-				MenuNum = 3; 
-			}
-		}
-		while (window.pollEvent(event))
-		{
-			if (event.type == Event::Closed)
-			{
-				isMenu = false;
-				exit(1999);
-				window.close();
-			}
+    while (isMenu) {
+        MenuNum = 0;
+        Event event;
 
-			if (event.type == Event::MouseButtonReleased)
-			{
-				if (event.mouseButton.button == Mouse::Left)
-				{
-					if (MenuNum == 1)
-					{
-						isMenu = false;
-					}
-					else
-					{
-						if (MenuNum == 2)
-						{
-							testnumber++;
-						}
-						if (MenuNum == 3)
-						{
-							testnumber--;
-						}
-						ifstream wordsfile;
-						path = "tests/";
-						path += testnumber;
-						path += ".txt";
-						wordsfile.open(path);
-						int wordnumber = 0;
-						while (!wordsfile.eof())
-						{
-							wordsfile >> tmpstr;
-							words[0][wordnumber] = sf::String(tmpstr);
-							wordsfile >> tmpstr;
-							words[1][wordnumber] = sf::String(tmpstr);
-							wordnumber++;
-						}
-						wordsfile.close();
-					}
-				}
-			}
-		}
-		window.setTitle("English Words");
-		window.clear(sf::Color(71, 202, 221));
-		window.draw(FCloudSprite);
-		window.draw(SCloudSprite);
-		if (testnumber != '9')
-		{
-			window.draw(button1);
-		}
-		if (testnumber != '1')
-		{
-			window.draw(button3);
-		}
-		window.draw(button2);
-		for (int wordcounter = 1; wordcounter < 10; ++wordcounter)
-		{
-			text.setString(words[1][wordcounter - 1] + " - " + words[0][wordcounter - 1]);
-			text.setPosition(220, wordcounter*40);
-			window.draw(text);
-		}
+        if (IntRect(260, 430, 173, 32).contains(Mouse::getPosition(window))) {
+            MenuNum = 1;
+        }
+        if (testnumber != '9') {
+            if (IntRect(510, 430, 173, 32)
+                        .contains(Mouse::getPosition(window))) {
+                MenuNum = 2;
+            }
+        }
+        if (testnumber != '1') {
+            if (IntRect(10, 430, 173, 32)
+                        .contains(Mouse::getPosition(window))) {
+                MenuNum = 3;
+            }
+        }
+        while (window.pollEvent(event)) {
+            if (event.type == Event::Closed) {
+                isMenu = false;
+                exit(1999);
+                window.close();
+            }
 
-		window.display();
-	}
+            if (event.type == Event::MouseButtonReleased) {
+                if (event.mouseButton.button == Mouse::Left) {
+                    if (MenuNum == 1) {
+                        isMenu = false;
+                    } else {
+                        if (MenuNum == 2) {
+                            testnumber++;
+                        }
+                        if (MenuNum == 3) {
+                            testnumber--;
+                        }
+                        ifstream wordsfile;
+                        path = "tests/";
+                        path += testnumber;
+                        path += ".txt";
+                        wordsfile.open(path);
+                        int wordnumber = 0;
+                        while (!wordsfile.eof()) {
+                            wordsfile >> tmpstr;
+                            words[0][wordnumber] = sf::String(tmpstr);
+                            wordsfile >> tmpstr;
+                            words[1][wordnumber] = sf::String(tmpstr);
+                            wordnumber++;
+                        }
+                        wordsfile.close();
+                    }
+                }
+            }
+        }
+        window.setTitle("English Words");
+        window.clear(sf::Color(71, 202, 221));
+        window.draw(FCloudSprite);
+        window.draw(SCloudSprite);
+        if (testnumber != '9') {
+            window.draw(button1);
+        }
+        if (testnumber != '1') {
+            window.draw(button3);
+        }
+        window.draw(button2);
+        for (int wordcounter = 1; wordcounter < 10; ++wordcounter) {
+            text.setString(
+                    words[1][wordcounter - 1] + " - "
+                    + words[0][wordcounter - 1]);
+            text.setPosition(220, wordcounter * 40);
+            window.draw(text);
+        }
+
+        window.display();
+    }
 }
