@@ -111,7 +111,7 @@ void Start(RenderWindow& window)
                         isMenu = false;
                     } else {
                         if (MenuNum == 1) {
-                            Test(window, "1.txt");
+                            Test(window, "1");
                         }
                         if (MenuNum == 2) {
                             Test(window, "2.txt");
