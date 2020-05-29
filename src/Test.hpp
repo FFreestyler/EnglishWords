@@ -1,4 +1,4 @@
-#indef TEST_HPP
+#ifndef TEST_HPP
 #define TEST_hpp
 
 void Test(RenderWindow& window, string testnumber);
