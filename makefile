@@ -16,7 +16,6 @@ prog:
 		$(CC) -o $(DIR)/$(DIR3)/Start.o $(SFML2) $(CFLAGS) $(DIR3)/Start.cpp
 		$(CC) -o $(DIR)/$(DIR3)/Test.o $(SFML2) $(CFLAGS) $(DIR3)/Test.cpp
 		$(CC) -o $(DIR)/$(DIR3)/TextBox.o $(SFML2) $(CFLAGS) $(DIR3)/TextBox.cpp
-		$(CC) -o $(DIR)/$(DIR3)/Verify.o $(SFML2) $(CFLAGS) $(DIR3)/Verify.cpp
 		$(CC) -o $(DIR)/$(DIR3)/wordscheck.o $(SFML2) $(CFLAGS) $(DIR3)/wordscheck.cpp
 		$(CC) $(DIR)/$(DIR3)/*.o -o $(DIR2)/$(OUT) $(SFML2) $(SFML)
 runprog:

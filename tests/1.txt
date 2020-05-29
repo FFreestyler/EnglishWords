@@ -1,5 +1,5 @@
-man Мужчина
-family Семья
+man Myzchina
+family Semya
 parents Родители
 father Отец
 mother Мама
@@ -7,4 +7,4 @@ daughter Дочь
 brother Брат
 people Люди
 woman Женщина
-apple Яблоко
+apple Yabloko
