@@ -4,4 +4,3 @@
 void menu(RenderWindow& window);
 
 #indef
-
