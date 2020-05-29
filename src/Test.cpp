@@ -13,7 +13,7 @@
 using namespace sf;
 using namespace std;
 
-void Test(sf::RenderWindow& window, sf::String testnumber)
+void Test(sf::RenderWindow& window, const char* testnumber)
 {
     setlocale(LC_ALL, "RUSSIAN");
     const int height = 480; //������ ����
@@ -53,7 +53,10 @@ void Test(sf::RenderWindow& window, sf::String testnumber)
     ifstream wordsfile;
 
     string tmpstr;
-    wordsfile.open("tests/" + testnumber);
+    string path = "tests/";
+    path += testnumber;
+    path += ".txt";
+    wordsfile.open(path);
     int wordnumber = 0;
     while (!wordsfile.eof()) {
         wordsfile >> tmpstr;
