@@ -74,7 +74,7 @@ void menu(RenderWindow& window)
             if (event.type == Event::MouseButtonReleased) {
                 if (event.mouseButton.button == Mouse::Left)
                     if (MenuNum == 1) {
-                        Second(window);
+                        Start(window);
                     }
                 if (MenuNum == 2) {
                     wordscheck(window);
