@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Man Ð¼ÑƒÐ¶Ñ‡Ð¸Ð½Ð°
 Family ÑÐµÐ¼ÑŒÑ
 Parents Ñ€Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ð¸
@@ -7,3 +8,15 @@ Daughter Ð´Ð¾Ñ‡ÑŒ
 Brother Ð±Ñ€Ð°Ñ‚
 People Ð»ÑŽÐ´Ð¸
 Woman Ð¶ÐµÐ½Ñ‰Ð¸Ð½Ð°
+=======
+man Ìóæ÷èíà
+family Ñåìüÿ
+parents Ðîäèòåëè
+father Îòåö
+mother Ìàìà
+daughter Äî÷ü
+brother Áðàò
+people Ëþäè
+woman Æåíùèíà
+apple ßáëîêî
+>>>>>>> Functional

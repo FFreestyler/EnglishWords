@@ -1,0 +1,10 @@
+girl Девочка
+friend Друг
+neighbor Сосед
+client Клиент
+aunt Тетя
+job Работа
+doctor Врач
+nurse Медсестра
+waiter Официант
+artist Художник

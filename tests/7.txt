@@ -1,0 +1,10 @@
+valley Долина
+stairs Ступеньки
+trip Поездка
+subject Предмет
+steam Пар
+rotate Вращать
+queue Очередь
+stairs Ступеньки
+predator Хищник
+neighbour Сосед

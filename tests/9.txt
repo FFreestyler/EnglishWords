@@ -1,0 +1,10 @@
+follow Следовать
+wave Волна
+develop Разрабатывать
+fix Исправить
+desert Пустыня
+exchange Обмен
+drum Барабан
+torch Факел
+wheel Колесо
+ice Лед

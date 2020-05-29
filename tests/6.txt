@@ -1,0 +1,10 @@
+church Церковь
+cafe Кафе
+hotel Гостиница
+bank Банк
+cinema Кинотеатр
+hospital Больница
+police Полиция
+post Почта
+airport Аэропорт
+office Офис
