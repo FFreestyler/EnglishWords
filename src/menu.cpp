@@ -67,7 +67,7 @@ void menu(RenderWindow& window)
         while (window.pollEvent(event)) {
             if (event.type == Event::Closed) {
                 isMenu = false;
-                exit(1999);
+                exit(0);
                 window.close();
             }
 
@@ -80,8 +80,8 @@ void menu(RenderWindow& window)
                     wordscheck(window);
                 }
                 if (MenuNum == 3) {
-                    window.close();
                     isMenu = false;
+                    exit(0);
                 }
             }
         }

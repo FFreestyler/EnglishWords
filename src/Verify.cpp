@@ -1,4 +1,5 @@
 #include "Start.hpp"
+#include "Test.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <functional>
@@ -42,19 +43,19 @@ void Verify(RenderWindow& window, sf::String verify, sf::String correctw)
     nextButton.setPosition(290, 390);
 
     Font font;
-    font.loadFromFile("Domkrat Bold.ttf");
+    font.loadFromFile("Domkrat Bold.Ttf");
     Text text("", font, 30);
     text.setStyle(Text::Bold);
     text.setPosition(281, 120);
 
-    Text text1(L"������ �����:", font, 30);
+    Text text1(L"Верный ответ:", font, 30);
     Text CorrectWord(correctw, font, 30);
 
     if (verify == "y") {
-        text.setString(L"����� ������");
+        text.setString(L"Ответ верный");
         text.setPosition(270, 210);
     } else {
-        text.setString(L"����� ��������");
+        text.setString(L"Ответ неверный");
         text.setPosition(260, 210);
         text1.setPosition(260, 240);
         CorrectWord.setPosition(430, 240);
@@ -98,4 +99,5 @@ void Verify(RenderWindow& window, sf::String verify, sf::String correctw)
 
         window.display();
     }
+    Test(window, "tests/1.txt");
 }

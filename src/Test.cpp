@@ -1,13 +1,13 @@
+#include "Start.hpp"
 #include "TextBox.hpp"
 #include "Verify.hpp"
-#include "menu.hpp"
 #include <SFML/Graphics.hpp>
 #include <algorithm>
 #include <fstream>
 #include <functional>
 #include <iostream>
-#include <locale.h>
-#include <string>
+#include <stdio.h>
+#include <string.h>
 #include <vector>
 
 using namespace sf;
@@ -15,11 +15,10 @@ using namespace std;
 
 void Test(sf::RenderWindow& window, const char* testnumber)
 {
-    setlocale(LC_ALL, "RUSSIAN");
-    const int height = 480; //������ ����
-    const int width = 720;  //������ ����
+    const int height = 480;
+    const int width = 720;
     const int GUI_TEXT_MAX = 24;
-    const int wordquantity = 10;
+    const int wordquantity = 11;
     sf::String words[2][wordquantity];
     TextField field;
 
@@ -44,19 +43,16 @@ void Test(sf::RenderWindow& window, const char* testnumber)
     VerifyButton.setPosition(524, 434);
 
     Font font;
-    font.loadFromFile("font.ttf");
+    font.loadFromFile("Domkrat Bold.Ttf");
     const int textsize = 25;
     Text text("", font, textsize);
     text.setStyle(Text::Bold);
     text.setPosition(230, 15);
 
     ifstream wordsfile;
-
+    wordsfile.open(testnumber);
     string tmpstr;
-    string path = "tests/";
-    path += testnumber;
-    path += ".txt";
-    wordsfile.open(path);
+
     int wordnumber = 0;
     while (!wordsfile.eof()) {
         wordsfile >> tmpstr;
@@ -127,7 +123,7 @@ void Test(sf::RenderWindow& window, const char* testnumber)
                         }
                         if (wordcounter == wordnumber - 1) {
                             while (isMenu) {
-                                Text endtext(L"���� �������", font, 30);
+                                Text endtext(L"Тест окончен", font, 30);
                                 endtext.setPosition(275, 210);
                                 window.clear(sf::Color(21, 132, 149));
                                 window.draw(BackGrSprite);
@@ -165,4 +161,5 @@ void Test(sf::RenderWindow& window, const char* testnumber)
 
         window.display();
     }
+    Start(window);
 }

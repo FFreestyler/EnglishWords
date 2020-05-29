@@ -1,4 +1,4 @@
-#include "Start.hpp"
+#include "menu.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <functional>
@@ -51,7 +51,7 @@ void wordscheck(RenderWindow& window)
 
     sf::Clock clock;
 
-    const int wordquantity = 10;
+    const int wordquantity = 11;
     sf::String words[2][wordquantity];
 
     char testnumber = '1';
@@ -149,4 +149,5 @@ void wordscheck(RenderWindow& window)
 
         window.display();
     }
+    menu(window);
 }

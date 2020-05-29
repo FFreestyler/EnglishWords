@@ -1,4 +1,3 @@
-#include "Start.hpp"
 #include "Test.hpp"
 #include "menu.hpp"
 #include <SFML/Graphics.hpp>
@@ -111,34 +110,34 @@ void Start(RenderWindow& window)
                         isMenu = false;
                     } else {
                         if (MenuNum == 1) {
-                            Test(window, "1");
+                            Test(window, "tests/1.txt");
                         }
                         if (MenuNum == 2) {
-                            Test(window, "2.txt");
+                            Test(window, "tests/2.txt");
                         }
                         if (MenuNum == 3) {
-                            Test(window, "3.txt");
+                            Test(window, "tests/3.txt");
                         }
                         if (MenuNum == 4) {
-                            Test(window, "4.txt");
+                            Test(window, "tests/4.txt");
                         }
                         if (MenuNum == 5) {
-                            Test(window, "5.txt");
+                            Test(window, "tests/5.txt");
                         }
                         if (MenuNum == 6) {
-                            Test(window, "6.txt");
+                            Test(window, "tests/6.txt");
                         }
                         if (MenuNum == 7) {
-                            Test(window, "7.txt");
+                            Test(window, "tests/7.txt");
                         }
                         if (MenuNum == 8) {
-                            Test(window, "8.txt");
+                            Test(window, "tests/8.txt");
                         }
                         if (MenuNum == 9) {
-                            Test(window, "9.txt");
+                            Test(window, "tests/9.txt");
                         }
                         if (MenuNum == 10) {
-                            Test(window, "10.txt");
+                            Test(window, "tests/10.txt");
                         }
                     }
                 }
@@ -163,4 +162,5 @@ void Start(RenderWindow& window)
 
         window.display();
     }
+    menu(window);
 }
