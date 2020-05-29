@@ -1,4 +1,4 @@
-#include "Menu.hpp"
+#include "menu.hpp"
 #include "Start.hpp"
 #include "Test.hpp"
 #include <SFML/Graphics.hpp>

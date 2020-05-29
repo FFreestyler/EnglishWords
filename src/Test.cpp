@@ -1,4 +1,4 @@
-#include "Menu.hpp"
+#include "menu.hpp"
 #include "TextBox.hpp"
 #include "Verify.hpp"
 #include <SFML/Graphics.hpp>
