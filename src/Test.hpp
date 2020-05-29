@@ -1,5 +1,6 @@
 #ifndef TEST_HPP
-#define TEST_hpp
+#define TEST_HPP
+#include <SFML/Graphics.hpp>
 
 void Test(RenderWindow& window, string testnumber);
 
