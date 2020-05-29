@@ -9,7 +9,7 @@
 
 using namespace sf;
 
-void Second(RenderWindow& window)
+void Start(RenderWindow& window)
 {
     Texture exTexture;
     exTexture.loadFromFile("images/ex.png");

@@ -1,6 +1,6 @@
 #indef START_HPP
 #define START_HPP
 
-void Second(RenderWindow& window);
+void Start(RenderWindow& window);
 
 #endif
