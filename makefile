@@ -12,7 +12,7 @@ RUN = runner
 all: prog
 prog:
 		$(CC) -o $(DIR)/$(DIR3)/main.o $(SFML2) $(CFLAGS) $(DIR3)/main.cpp
-		$(CC) -o $(DIR)/$(DIR3)/Menu.o $(SFML2) $(CFLAGS) $(DIR3)/Menu.cpp
+		$(CC) -o $(DIR)/$(DIR3)/Menu.o $(SFML2) $(CFLAGS) $(DIR3)/menu.cpp
 		$(CC) -o $(DIR)/$(DIR3)/Start.o $(SFML2) $(CFLAGS) $(DIR3)/Start.cpp
 		$(CC) -o $(DIR)/$(DIR3)/Test.o $(SFML2) $(CFLAGS) $(DIR3)/Test.cpp
 		$(CC) -o $(DIR)/$(DIR3)/TextBox.o $(SFML2) $(CFLAGS) $(DIR3)/TextBox.cpp
