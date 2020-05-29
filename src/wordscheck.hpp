@@ -2,6 +2,6 @@
 #define WORDSCHECK_HPP
 #include <SFML/Graphics.hpp>
 
-void wordscheck(RenderWindow& window);
+void wordscheck(sf::RenderWindow& window);
 
 #endif

@@ -2,6 +2,6 @@
 #define MENU_HPP
 #include <SFML/Graphics.hpp>
 
-void menu(RenderWindow& window);
+void menu(sf::RenderWindow& window);
 
 #endif

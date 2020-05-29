@@ -2,6 +2,6 @@
 #define TEST_HPP
 #include <SFML/Graphics.hpp>
 
-void Test(RenderWindow& window, string testnumber);
+void Test(sf::RenderWindow& window, string testnumber);
 
 #endif
