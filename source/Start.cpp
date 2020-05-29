@@ -1,4 +1,3 @@
-#pragma once
 #include "Menu.h"
 #include "Second.h"
 #include "Test.h"

@@ -12,6 +12,10 @@ RUN = runner
 all: prog
 prog:
 		$(CC) -o $(DIR)/$(DIR3)/menu.o $(SFML2) $(CFLAGS) $(DIR3)/menu.cpp
+		$(CC) -o $(DIR)/$(DIR3)/Menu.o $(DIR3)/Menu.cpp
+		$(CC) -o $(DIR)/$(DIR3)/Start.o $(DIR3)/Start.cpp
+		$(CC) -o $(DIR)/$(DIR3)/Test.o $(DIR3)/Test.cpp
+		$(CC) -o $(DIR)/$(DIR3)/TextBox.o $(DIR3)/TextBox.cpp
 		$(CC) $(DIR)/$(DIR3)/*.o -o $(DIR2)/$(OUT) $(SFML2) $(SFML)
 runprog:
 		./$(DIR2)/$(OUT)
