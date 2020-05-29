@@ -1,4 +1,4 @@
-#include "Menu.hpp"
+#include "menu.hpp"
 #include "Start.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
@@ -10,16 +10,16 @@ using namespace sf;
 
 int main()
 {
-    const int height = 480; //Высота окна
-    const int width = 720;  //Ширина окна
+    const int height = 480; //Г‚Г»Г±Г®ГІГ  Г®ГЄГ­Г 
+    const int width = 720;  //ГГЁГ°ГЁГ­Г  Г®ГЄГ­Г 
     RenderWindow window(
             VideoMode(width, height),
             "English Words",
-            sf::Style::Close); //Создание окна
+            sf::Style::Close); //Г‘Г®Г§Г¤Г Г­ГЁГҐ Г®ГЄГ­Г 
     window.setVerticalSyncEnabled(
-            true); //Включение вертикальной синхронизации окна
+            true); //Г‚ГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГўГҐГ°ГІГЁГЄГ Г«ГјГ­Г®Г© Г±ГЁГ­ГµГ°Г®Г­ГЁГ§Г Г¶ГЁГЁ Г®ГЄГ­Г 
 
-    while (window.isOpen()) //Отрисовка окна
+    while (window.isOpen()) //ГЋГІГ°ГЁГ±Г®ГўГЄГ  Г®ГЄГ­Г 
     {
         menu(window);
     }
