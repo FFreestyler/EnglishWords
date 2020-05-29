@@ -1,8 +1,8 @@
-#include "menu.hpp"
 #include "TextBox.hpp"
 #include "Verify.hpp"
+#include "menu.hpp"
 #include <SFML/Graphics.hpp>
-#include <codecvt>
+#include <algorithm>
 #include <fstream>
 #include <functional>
 #include <iostream>
@@ -13,11 +13,11 @@
 using namespace sf;
 using namespace std;
 
-void Test(RenderWindow& window, string testnumber)
+void Test(sf::RenderWindow& window, sf::String testnumber)
 {
     setlocale(LC_ALL, "RUSSIAN");
-    const int height = 480; //Высота окна
-    const int width = 720;  //Ширина окна
+    const int height = 480; //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+    const int width = 720;  //пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
     const int GUI_TEXT_MAX = 24;
     const int wordquantity = 10;
     sf::String words[2][wordquantity];
@@ -115,7 +115,7 @@ void Test(RenderWindow& window, string testnumber)
                                 firstword.begin(),
                                 firstword.end(),
                                 firstword.begin(),
-                                tolower);
+                                _tolower);
                         string secondword = words[0][wordcounter];
                         if (firstword == secondword) {
                             Verify(window, "y", words[0][wordcounter]);
@@ -124,7 +124,7 @@ void Test(RenderWindow& window, string testnumber)
                         }
                         if (wordcounter == wordnumber - 1) {
                             while (isMenu) {
-                                Text endtext(L"Тест окончен", font, 30);
+                                Text endtext(L"пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ", font, 30);
                                 endtext.setPosition(275, 210);
                                 window.clear(sf::Color(21, 132, 149));
                                 window.draw(BackGrSprite);

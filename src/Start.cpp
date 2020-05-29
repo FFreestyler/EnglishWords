@@ -1,6 +1,6 @@
-#include "menu.hpp"
 #include "Start.hpp"
 #include "Test.hpp"
+#include "menu.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <functional>
@@ -106,7 +106,7 @@ void Start(RenderWindow& window)
             }
 
             if (event.type == Event::MouseButtonReleased) {
-                if (event.mouseButton.button == Mouse::Left)
+                if (event.mouseButton.button == Mouse::Left) {
                     if (MenuNum == 11) {
                         isMenu = false;
                     } else {
@@ -141,6 +141,7 @@ void Start(RenderWindow& window)
                             Test(window, "10.txt");
                         }
                     }
+                }
             }
         }
         text.setString("Choose a test block");

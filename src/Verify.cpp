@@ -8,7 +8,7 @@
 using namespace sf;
 using namespace std;
 
-void Verify(RenderWindow& window, string verify, string correctw)
+void Verify(RenderWindow& window, sf::String verify, sf::String correctw)
 {
     bool isMenu = 1;
     int MenuNum = 0;
@@ -47,14 +47,14 @@ void Verify(RenderWindow& window, string verify, string correctw)
     text.setStyle(Text::Bold);
     text.setPosition(281, 120);
 
-    Text text1(L"Верный ответ:", font, 30);
+    Text text1(L"пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:", font, 30);
     Text CorrectWord(correctw, font, 30);
 
     if (verify == "y") {
-        text.setString(L"Ответ верный");
+        text.setString(L"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
         text.setPosition(270, 210);
     } else {
-        text.setString(L"Ответ неверный");
+        text.setString(L"пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         text.setPosition(260, 210);
         text1.setPosition(260, 240);
         CorrectWord.setPosition(430, 240);

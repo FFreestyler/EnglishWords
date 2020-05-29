@@ -137,7 +137,7 @@ private:
     sf::Text txt;
     sf::RectangleShape box;
 
-    int size;
+    unsigned int size;
 
     int length;
 
