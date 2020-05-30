@@ -6,7 +6,7 @@
 `git clone https://github.com/FFreestyler/EnglishWords.git`
 ### 2.Зайти в него 
 `cd /<место расположение репозитория>/EnglishWords`
-### 3. Установить библиотеку для запуска проекта
+### 3. Установить библиотеку для запуска приложения
 `sudo apt-get install libsfml-dev`
 ### 4. Собрать и запустить приложение
 `make && make runprog`
