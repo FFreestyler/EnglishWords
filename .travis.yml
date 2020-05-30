@@ -2,6 +2,7 @@ language: cpp
 compiler:
   - g++
 dist: xenial
+      trusty
 install:
   - sudo apt-get update
   - sudo apt-get install libsfml-dev
