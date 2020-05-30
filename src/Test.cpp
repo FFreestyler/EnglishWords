@@ -2,7 +2,6 @@
 #include "TextBox.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
-#include <functional>
 #include <string.h>
 #include <vector>
 

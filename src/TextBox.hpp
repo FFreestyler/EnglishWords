@@ -15,7 +15,7 @@ public:
     TextField()
     {
         active = false;
-        box.setColor(sf::Color::White);
+        box.setFillColor(sf::Color::White);
         box.setOutlineThickness(1);
 
         renderPlaceholder = false;
