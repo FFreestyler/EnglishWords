@@ -1,0 +1,10 @@
+player Igrok
+student Student
+pupil Shkol'nik
+cat Kot
+dog Sobaka
+bird Ptica
+wolf Volk
+cow Korova
+rat Krysa
+rabbit Krolik

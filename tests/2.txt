@@ -1,0 +1,10 @@
+girl Devushka
+friend Drug
+neighbor Sosed
+client Kliyent
+aunt Tetya
+job Rabota
+doctor Vrach
+nurse Medsestra
+waiter Ofitsiant
+painter khudozhnik

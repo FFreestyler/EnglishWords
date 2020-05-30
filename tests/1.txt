@@ -1,0 +1,10 @@
+man Muzhchina
+family Sem'ya
+parents Roditeli
+father Otec
+mother Mama
+daughter Doch
+brother Brat
+people Lyudi
+woman Zhenshchina
+apple Yabloko

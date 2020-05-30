@@ -1,0 +1,10 @@
+valley Dolina
+stairs Stupen'ki
+trip Poezdka
+subject Predmet
+steam Par
+rotate Vrashchat'
+queue Ochered'
+stairs Stupen'ki
+shadow Ten'
+neighbour Sosed

@@ -1,0 +1,10 @@
+duck Utka
+country Strana
+city Gorod
+building Zdanie
+place Mesto
+exit Vykhod
+center Tsenter
+roof Krysha
+school Shkola
+theater Teatr

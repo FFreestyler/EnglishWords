@@ -1,0 +1,10 @@
+goose Gus'
+horse Loshad'
+fox Lisa
+giraffe Zhiraf
+frog Lyagushka
+bear Medved'
+mouse Mysh'
+pig Svin'ya
+monkey Obez'yana
+elephant Slon

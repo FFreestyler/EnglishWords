@@ -1,0 +1,10 @@
+church Tserkov'
+cafe Kafe
+hotel Gostinitsa
+shop Magazin
+cinema Kinoteatr
+hospital Bol'nitsa
+police Politsiya
+post Pochta
+airport Aeroport
+office Ofis
