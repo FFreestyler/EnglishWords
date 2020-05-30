@@ -6,10 +6,7 @@ OUT = out
 DIR = build
 DIR2 = bin
 DIR3 = src
-DIR4 = unittest
-PRE = cxxtestgen --error-printer
-RUN = runner
-.PHONY: all prog test runprog clean
+.PHONY: all prog runprog clean
 all: prog
 prog:
 		$(CC) -o $(DIR)/$(DIR3)/main.o $(SFML2) $(CFLAGS) $(DIR3)/main.cpp
@@ -19,9 +16,7 @@ prog:
 		$(CC) -o $(DIR)/$(DIR3)/TextBox.o $(SFML2) $(CFLAGS) $(DIR3)/TextBox.cpp
 		$(CC) -o $(DIR)/$(DIR3)/wordscheck.o $(SFML2) $(CFLAGS) $(DIR3)/wordscheck.cpp
 		$(CC) $(DIR)/$(DIR3)/*.o -o $(DIR2)/$(OUT) $(SFML2) $(SFML)
-test:
 		
-		./$(DIR2)/$(RUN)
 runprog:
 		./$(DIR2)/$(OUT)
 clean:
