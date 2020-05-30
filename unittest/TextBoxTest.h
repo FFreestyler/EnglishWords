@@ -1,16 +1,21 @@
 #include "TextBox.hpp"
-#include <cxxtest/TestSuite.h>
+#include <SFML/Graphics>
+#include <ctest.h>
 #include <iostream>
 using namespace std;
 
-void testTextBox(void)
-{
-  //Expectation
-  string exptext = "num";
+class TextBoxTest : public CxxTest::Testsuite {
+    TextField field;
 
-  //Testing
-  TextField field;
-  field.txt.setString("num");
+public:
+    void testTextBox(void)
+    {
+        // Expectation
+        string exptext = "num";
 
-  TS_ASSERT_EQUALS(exptext,field.getString());
-}
+        // Result
+        field.txt.setString("num");
+
+        ASSERT_STR(exptext, field.getString());
+    }
+};

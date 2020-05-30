@@ -20,9 +20,7 @@ prog:
 		$(CC) -o $(DIR)/$(DIR3)/wordscheck.o $(SFML2) $(CFLAGS) $(DIR3)/wordscheck.cpp
 		$(CC) $(DIR)/$(DIR3)/*.o -o $(DIR2)/$(OUT) $(SFML2) $(SFML)
 test:
-		$(PRE) -o $(DIR)/$(DIR4)/$(RUN).cpp $(DIR4)/*.h
-		$(CC) -I $(DIR4) -I $(DIR3) $(DIR)/$(DIR4)/$(RUN).cpp $(DIR)/$(DIR3)/t*.o -o $(DIR2)/$(RUN)
-		./$(DIR2)/$(RUN) --help-tests
+		
 		./$(DIR2)/$(RUN)
 runprog:
 		./$(DIR2)/$(OUT)

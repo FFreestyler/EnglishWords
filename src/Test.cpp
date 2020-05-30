@@ -78,7 +78,9 @@ void Test(sf::RenderWindow& window, const char* testnumber)
     text.setStyle(Text::Bold);
     text.setPosition(230, 15);
 
-    ifstream wordsfile(testnumber);
+    string path = testnumber;
+
+    ifstream wordsfile(path.c_str());
     string tmpstr;
 
     int wordnumber = 0;
