@@ -1,8 +1,6 @@
 #include "menu.hpp"
 #include <SFML/Graphics.hpp>
 #include <fstream>
-#include <functional>
-#include <iostream>
 #include <vector>
 
 using namespace sf;

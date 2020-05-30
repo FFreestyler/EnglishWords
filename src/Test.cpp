@@ -1,11 +1,7 @@
 #include "Start.hpp"
 #include "TextBox.hpp"
 #include <SFML/Graphics.hpp>
-#include <algorithm>
 #include <fstream>
-#include <functional>
-#include <iostream>
-#include <stdio.h>
 #include <string.h>
 #include <vector>
 
