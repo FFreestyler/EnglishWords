@@ -114,7 +114,7 @@ void wordscheck(RenderWindow& window)
                         path = "tests/";
                         path += testnumber;
                         path += ".txt";
-                        wordsfile.open(path);
+                        wordsfile.open(path.c_str());
                         int wordnumber = 0;
                         while (!wordsfile.eof()) {
                             wordsfile >> tmpstr;
