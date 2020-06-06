@@ -1,5 +1,6 @@
 # EnglishWords
 [![Build Status](https://travis-ci.com/FFreestyler/EnglishWords.svg?branch=master)](https://travis-ci.com/FFreestyler/EnglishWords)
+[![CodeFactor](https://www.codefactor.io/repository/github/ffreestyler/englishwords/badge)](https://www.codefactor.io/repository/github/ffreestyler/englishwords)
 
 ## Подготовка программы
 ### 1.Скачать репозиторий:
